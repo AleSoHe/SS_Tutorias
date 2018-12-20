@@ -1,0 +1,54 @@
+\documentclass[margin=5pt]{standalone}
+\usepackage{tikz,pgfplots}
+\usetikzlibrary{calc,angles,positioning,intersections,quotes,decorations.markings}
+
+\begin{document}
+    \def \minx {-1.2}
+    \def \maxx {1.2}
+    \def \miny {-1.2}
+    \def \maxy {1.2}
+    \def \delta {0.2}
+
+    \begin{tikzpicture}[scale=1.5]
+
+        % Draw big blue circle
+        \begin{scope}
+            \draw [fill=blue,draw=none,opacity=0.5] (0,0) circle (0.5);
+        \end{scope}
+        % Draw left white circle
+        \begin{scope}
+            \draw [fill=white,draw=none,opacity=1] (-0.25,-0.25) circle (0.3535);
+        \end{scope}
+        % Draw right white circle
+        \begin{scope}
+            \draw [fill=white,draw=none,opacity=1] (0.25,-0.25) circle (0.3535);
+        \end{scope}
+
+        % Draw axis
+        \draw[step=0.5,gray,ultra thin] (\minx,\miny) grid (\maxx,\maxy);
+        \draw [->] (\minx,0) -- (\maxx+\delta,0) node [right,scale=0.9] {\scriptsize $Re\{z\}$};
+        \draw [->] (0,\miny) -- (0,\maxy+\delta) node [above,scale=0.9] {\scriptsize $Im\{z\}$};
+
+        % Draw big blue circle border
+        \begin{scope}
+            \draw [draw=black,opacity=1, very thin] (0,0) circle (0.5);
+        \end{scope}
+        % Draw left white circle border
+        \begin{scope}
+            \draw [draw=black,opacity=1, very thin] (-0.25,-0.25) circle (0.3535);
+        \end{scope}
+        % Draw right white circle border
+        \begin{scope}
+            \draw [draw=black,opacity=1, very thin] (0.25,-0.25) circle (0.3535);
+        \end{scope}
+
+        % Axis numbers
+            \draw[shift={(0,-1/2)}, very thin] (2pt,0pt) -- (-2pt,0pt) node[below left = 3pt and 0pt] {\scriptsize $-\frac{1}{2}$};
+            \draw[shift={(0,1/2)}, very thin] (2pt,0pt) -- (-2pt,0pt) node[above left] {\scriptsize $\frac{1}{2}$};
+
+            \draw[shift={(-1/2,0)}, very thin] (0pt,2pt) -- (0pt,-2pt) node[above left] {\scriptsize $-\frac{1}{2}$};
+            \draw[shift={(1/2,0)}, very thin] (0pt,2pt) -- (0pt,-2pt) node[above right] {\scriptsize $\frac{1}{2}$};
+
+
+    \end{tikzpicture}
+\end{document}

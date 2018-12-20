@@ -1,0 +1,39 @@
+\documentclass[margin=5pt]{standalone}
+\usepackage{tikz,pgfplots}
+
+\begin{document}
+    \def \minx {-2.2}
+    \def \maxx {2.2}
+    \def \miny {-1.2}
+    \def \maxy {3.2}
+    \def \delta {0.2}
+
+    \begin{tikzpicture}[scale=1]
+        % Draw axis
+        \draw[step=1,gray,ultra thin] (\minx,\miny) grid (\maxx,\maxy);
+        \draw [->] (\minx,0) -- (\maxx+\delta,0) node [right,scale=0.9] {\scriptsize $Re\{w\}$};
+        \draw [->] (0,\miny) -- (0,\maxy+\delta) node [above,scale=0.9] {\scriptsize $Im\{w\}$};
+
+        % Draw left circle
+        \begin{scope}
+            \clip (-2,0) rectangle (2,2);
+            \draw [thick](0,0.58) circle (1.15);
+        \end{scope}
+
+
+        % Draw left dashed
+        \begin{scope}
+            \clip (-2,0) rectangle (2,-1);
+            \draw [dashed] (0,0.58) circle (1.15);
+        \end{scope}
+
+        \draw [thick] (-1,0) -- (1,0);
+        % Axis numbers
+
+            \draw[shift={(0,2)}, very thin] (2pt,0pt) -- (-2pt,0pt) node[right] {\scriptsize $\sqrt{3}$};
+            \draw[shift={(-1,0)}, very thin] (0pt,2pt) -- (0pt,-2pt) node[below left] {\scriptsize $-1$};
+            \draw[shift={(1,0)}, very thin] (0pt,2pt) -- (0pt,-2pt) node[below right] {\scriptsize $1$};
+
+    \end{tikzpicture}
+
+\end{document}

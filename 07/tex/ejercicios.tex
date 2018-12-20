@@ -1,0 +1,66 @@
+% --- Ejercicio 1 -------- %
+\begin{ejercicio}
+    Sea una base de funciones ortogonales periódicas $u_i(t)=u_i(t+T)$ con periodo $T=6$ dadas por:\\[3pt]
+    $$
+    u_1(t) = \left\{
+        \begin{array}{lll}
+            1  & \text{para } &1 \leq t \leq 3\\
+            -1 & \text{para } &-3 \leq t \leq -1\\
+            0  & \text{para } &-1 \leq t \leq 1
+         \end{array}
+        \right.
+    $$\vspace{3pt}
+    $$ u_k(t)=u_{k-1}(3t) $$
+
+    Lo que implica que $u_2(t)=u_1(3t)$, $u_2(3t)=u_1(9t)$, etc.\\
+    Algunas funciones periódicas se pueden aproximar con:
+    $$ \tilde{x}(t)=\sum_{i=1}^{N}a_i u_i(t) $$
+    La función periódica $x(t)=t/3$ para $-3 \leq t \leq 3$, con periodo $T=6$ se sabe que tiene $a_2=2/9$. Determine la norma de $u_1$, el valor de $a_1$ y grafique tanto la función $x(t)$ como su aproximación $\tilde{x}(t)$ para $N=2$ en el intervalo $t\in[-3;3]$.
+\end{ejercicio}
+
+% --- Ejercicio 2 -------- %
+\begin{ejercicio}
+    Para la señal periódica continua
+    $$ x(t) = 2+\cos{\left(\frac{2\pi}{3}t\right)}+4\sin\left(\frac{5\pi}{3}t\right) $$
+    \begin{enumerate}
+        \item Determine la frecuencia fundamental $\omega_0$.
+        \item Encuentre los coeficientes $c_k$ de la serie exponencial de Fourier.
+        \item Indique si $x(t)$ es una señal par o impar.
+    \end{enumerate}
+\end{ejercicio}
+
+% --- Ejercicio 3 -------- %
+\begin{ejercicio}
+    Considere tres señales periódicas continuas cuyas representaciones en serie de Fourier son como se muestra:
+    $$ x_1(t) = \sum_{k=0}^{100} (1/2)^k e^{jk \frac{2\pi}{50}t} $$
+    $$ x_2(t) = \sum_{k=-100}^{100} \cos(\pi k) e^{jk \frac{2\pi}{50}t} $$
+    $$ x_3(t) = \sum_{-100}^{100} j\sin{\left(\frac{\pi k}{2} \right)} e^{jk \frac{2\pi}{50}t} $$
+    %
+    Utilice las propiedades de la serie de Fourier para determinar lo siguiente:
+    \begin{enumerate}
+        \item ¿Cuáles de las tres señales son de valor real?
+        \item ¿Cuáles de las tres señales son pares?
+    \end{enumerate}
+\end{ejercicio}
+
+% --- Ejercicio 4 -------- %
+\begin{ejercicio}
+    Una señal periódica continua $x(t)$ es de valor real y tiene un periodo fundamental de $T=8$. Los coeficientes de la serie exponencial de Fourier diferentes de cero para $x(t)$ son:
+    $$ c_1 = c_{-1} = 2 $$
+    $$ c_3 = c^*_{-3} = 4j $$
+    Exprese $x(t)$ de la forma $x(t)=\sum_{k=0}^{\infty} \tilde{c}_k \cos(k\omega_0 t + \theta_k)$
+\end{ejercicio}
+
+% --- Ejercicio 5 -------- %
+\begin{ejercicio}
+    La respuesta recortada de un rectificador de media onda es la función perdiódica $f(t)$ de periodo $2\pi$ definida sobre el periodo $0<t<2\pi$ por la expresión:
+    $$
+    f(t) = \left\{
+        \begin{array}{ll}
+            5\sin(t)   & 0 \leq t \leq \pi\\
+            0          & \pi \leq t \leq 2\pi
+         \end{array}
+        \right.
+    $$
+    Exprese $f(t)$ por medio de una síntesis en serie de Fourier.
+\end{ejercicio}
