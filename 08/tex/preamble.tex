@@ -1,0 +1,38 @@
+\documentclass[letter, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{fullpage} % changes the margin
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amsmath, amssymb}
+\setlength\parindent{0pt}
+\usepackage{graphicx} % figuras
+\usepackage{subfigure} % subfiguras
+\usepackage{mleftright}
+\usepackage{trfsigns}
+\usepackage{standalone}
+\usepackage{hyperref}
+\usepackage{subfigure}
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage{mathrsfs}
+
+
+\usepackage{ntheorem}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor=[rgb]{.6 0 0},
+    citecolor=[rgb]{.5 0 0},
+    urlcolor={blue}
+}
+
+\theorembodyfont{\normalfont}
+\theoremseparator{.}
+\newtheorem{ejercicio}{Ejercicio} %[section] % Comment out [section] to remove section number dependence
+
+
+\AtBeginDocument{
+  \renewcommand{\figurename}{Figura} %Cambia la palabra "Figura" por "Fig."
+}

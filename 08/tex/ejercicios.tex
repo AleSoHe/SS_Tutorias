@@ -1,0 +1,66 @@
+% --- Ejercicio 1 --- %
+\begin{ejercicio}
+Obtenga la expansión en serie de Fourier de la onda seno rectificada desctrita como $f(t)=|\sin(t)|.$ Represente la función en una serie donde utilice la base de cosenos desplazados y la de senos y cosenos.
+\end{ejercicio}
+
+% --- Ejercicio 2 --- %
+\begin{ejercicio}
+    \label{ej:2}
+    Determine los coeficientes de la serie de Fourier que represente la señal de la figura \ref{fig:diracs}.
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=.75\textwidth]{figs/diracs_train.pdf}
+        \caption{Señal para ejercicio \ref{ej:2}}.
+        \label{fig:diracs}
+    \end{figure}
+\end{ejercicio}
+
+% --- Ejercicio 3 --- %
+\begin{ejercicio}
+    Suponga que se nos proporciona la siguiente información sobre una señal $x(t)$
+    \begin{enumerate}[a.]
+        \item $x(t)$ es real y par.
+        \item $x(t)$ es periódica con periodo $T=2$ y tiene coeficientes de Fourier $c_k$.
+        \item $c_0=0$, $c_k=0$ para $|k|>1$.
+        \item $\displaystyle\frac{1}{2}\int_0^4|x(t)|^2\,dt = 2$
+    \end{enumerate}
+    Encuentre dos señales diferentes que satisfagan estas condiciones.
+\end{ejercicio}
+
+% --- Ejercicio 4 --- %
+\begin{ejercicio}
+    Una función está dada por:
+    %
+    $$
+    x(t) = \left\{
+    \begin{array}{ll}
+        t-1     & 1 \leq t \leq 2\\
+        -t+3    & 2 \leq t \leq 3\\
+        0       & \text{en el resto}
+    \end{array}
+    \right.
+    $$
+    %
+    Además, se puede utilizar $x(t)$ para construir una versión periódica de la siguiente forma:
+    %
+    $$
+    x_p(t) = \left\{
+    \begin{array}{ll}
+        x(t)     & 1 \leq t \leq 3\\
+        x(t+2n),    & \text{con } n\in\mathbb{Z} \text{, en el resto}\\
+    \end{array}
+    \right.
+    $$
+    %
+    \begin{enumerate}
+        \item Grafique $x(t)$ en el intervalo $-1 \leq t \leq 5$
+        \item Grafique $x_p(t)$ en el itervalo $-3 \leq t \leq 3$
+        \item Indique cómo deberían comportarse los coeficientes $c_k$ de la serie de Fourier:
+            $$ x_p(t) = \sum_{k=-\infty}^{\infty} c_k e^{j\omega_0 kt} $$
+        considerando la naturaleza real o compleja de $x_p(t)$, su simetría o asimetría y su forma (continuidad o discontinuidad de la función y sus derivadas).
+        \item Calcule el valor CD de $x_p(t)$.
+        \item Calcule los coeficientes $c_k$ del punto c) para $k=0$.
+        \item Escriba la serie de Fourier de $x_p(t)$ en sus tres versiones (exponencial, cosenoidal y trigonométrica).
+        \item Para $k=0,\pm 1, \pm 2, \pm 3, \pm 4, \pm 5$ grafique el espectro de magnitud de $c_k$ y $\tilde{c}_k$. ¿Son iguales? Justifique. 
+    \end{enumerate}
+\end{ejercicio}
