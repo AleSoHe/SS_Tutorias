@@ -1,0 +1,93 @@
+\begin{ejercicio}
+    Determine si el sistema $y(t)=x^2(t)$ es lineal o no lineal e invariante o variante en el tiempo.
+\end{ejercicio}
+
+\begin{ejercicio}
+    El espectro en magnitud completo para una señal $h(t)$ está dado por la figura \ref{fig:modulacion}. Superponga sobre ella la respuesta en magnitud de una señal dada por $h(t)\cos(3\pi t)$.
+    \label{ej:modulacion}
+    \begin{figure}[!h]
+        \centering
+        \includestandalone[width=.7\textwidth]{figs/modulacion}
+        \caption{Espectro de magnitud del ejercicio \ref{ej:modulacion}.}
+        \label{fig:modulacion}
+    \end{figure}
+
+\end{ejercicio}
+
+\begin{ejercicio}
+    Dado el pulso rectangular $r(t)=u(t+\frac{1}{2})-u(t-\frac{1}{2})$, donde $u(t)$ es el escalón unitario, grafique entonces la función $x(t)$ dada por la convolución:
+    $$ x(t)=u(t)*r \left(\frac{t}{T} \right) $$
+    Además, indique todas las magnitudes que dependen del valor $T$.
+\end{ejercicio}
+
+\begin{ejercicio}
+    Sean las funciones:
+    \begin{align*}
+        f_1(t) &= u(t)-u(t-1)\\
+        f_2(t) &= A[u(t)-u(t-2)]
+    \end{align*}
+\end{ejercicio}
+
+Grafique ambas señales y el resultado de su convolución $f_1(t)*f_2(t)$ en el dominio del tiempo. Asuma que $A>0$.
+
+\begin{ejercicio}
+    Dadas las funciones de la figura \ref{fig:5funciones}, indique con qué función debe ser convolucionada $f_1(t)$ para que sean generadas cada una de las funciones de la figura \ref{fig:convoluciones}.
+    \label{ej:convoluciones}
+    \begin{figure}[!h]
+        \centering
+        \subfloat{
+            \includestandalone[width=.25\textwidth]{figs/f1}
+        }
+        \subfloat{
+            \includestandalone[width=.25\textwidth]{figs/f2}
+        }\\
+        \subfloat{
+            \includestandalone[width=.25\textwidth]{figs/f3}
+        }
+        \subfloat{
+            \includestandalone[width=.25\textwidth]{figs/f4}
+        }
+        \subfloat{
+            \includestandalone[width=.25\textwidth]{figs/f5}
+        }
+        \caption{Funciones a convolucionar del ejercicio \ref{ej:convoluciones}.}
+        \label{fig:5funciones}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \subfloat{
+            \includestandalone[width=.25\textwidth]{figs/conv1}
+        }
+        \subfloat{
+            \includestandalone[width=.25\textwidth]{figs/conv2}
+        }\\
+        \subfloat{
+            \includestandalone[width=.25\textwidth]{figs/conv3}
+        }
+        \subfloat{
+            \includestandalone[width=.25\textwidth]{figs/conv4}
+        }
+        \caption{Resultados de convoluciones del ejercicio \ref{ej:convoluciones}.}
+        \label{fig:convoluciones}
+    \end{figure}
+\end{ejercicio}
+
+\begin{ejercicio}
+    Considere un sistema LTI causal con respuesta en frecuencia:
+    $$ H(j\omega) = \dfrac{1}{j\omega+3} $$
+    Para una entrada particular $x(t)$ se observa que este sistema produca la salida:
+    $$ y(t) = [e^{-3t}-e^{-4t}]u(t) $$
+    Determine $x(t)$.
+\end{ejercicio}
+
+\begin{ejercicio}
+    Considere un sistema LTI causal con respuesta en frecuencia:
+    $$ H(j\omega) = \dfrac{a-j\omega}{a+j\omega}$$
+    Donde $a>0$. Determine:
+    \begin{enumerate}[a.]
+        \item La respuesta de magnitud y fase de $H(j\omega)$.
+        \item La respuesta al impulso del sistema.
+        \item La salida del sistema si la entrada es $x(t)=\cos\left(\dfrac{t}{\sqrt{3}}\right)+\cos(t)+\cos(\sqrt{3}t)$.\\
+        Considere $a=1$.
+    \end{enumerate}
+\end{ejercicio}

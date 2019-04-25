@@ -1,0 +1,25 @@
+\documentclass{standalone}
+
+% Packages
+\usepackage{pst-sigsys}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+% Commands
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.1,0);}
+
+
+\begin{document}
+    \begin{tikzpicture}[>=latex']
+    \draw[lightgray, ultra thin] (-5,-3) grid (5,3);
+    \draw[thick,<->] (-5,0) -- (5,0) node [anchor=west] {$t$};
+    \draw[thick,<->] (0,-3) -- (0,3) node [anchor=south] {$\textrm{$x_1$}(t)$};
+    \draw[thick,domain=-1:1, xscale=3] plot[samples=200] function{2*sin(pi*x)/(pi*x)};
+    \node at (0.35,2.25) {$0.4$};
+    \node at (3.35,-0.25) {$3$};
+    \node at (-3.35,-0.25) {$-3$};
+    \end{tikzpicture}
+\end{document}

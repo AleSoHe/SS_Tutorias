@@ -1,0 +1,56 @@
+% --- Ejercicio 1 ---
+\begin{ejercicio}
+    Considere una señal $x(t)$ con transformada de Fourier $X(j\omega)$. Suponga que se cumplen los siguentes hechos:
+    \begin{itemize}
+        \item $x(t)$ es una función de valor real.
+        \item $\mathscr{F}^{-1}\{(1+j\omega)X(j\omega)\} = Ae^{-\frac{t}{\tau}} u(t)$, donde $A$ es independiente de $t$ y $\tau$ es una constante real positiva.
+        \item $\displaystyle\int_{-\infty}^{\infty}|X(j\omega)|^2\,d\omega=2\pi$
+    \end{itemize}
+    \begin{enumerate}[a.]
+        \item Determine una expresión de forma cerrada para $x(t)$ si $\tau\neq 1$.
+        \item Encuentre ahora la expresión de $x(t)$ para el caso particular $\tau=1$. (No es necesario despejar el valor de $A$ en este punto)
+    \end{enumerate}
+\end{ejercicio}
+
+\begin{ejercicio}
+    Determine el espectro de la función $\dfrac{\,d}{\,dt}\{u(-2-t)+u(t-2)\}$.
+\end{ejercicio}
+
+\begin{ejercicio}
+    Utilice la ecuación de síntesis de la transformada de Fourier para determinar la transformada inversa de:
+    \begin{align*}
+        |X(j\omega)| &= 2[u(\omega+3)-u(\omega-3)] \\
+        \angle{X(j\omega)} &= -\frac{3}{2}\omega + \pi
+    \end{align*}
+    Use su respuesta para determinar los valores de $t$ donde $x(t)=0$.
+\end{ejercicio}
+
+\begin{ejercicio}
+    Considere la señal:
+        $$ x(t) = \left\{
+            \begin{array}{ll}
+                0 & \text{para~} |t|>1\\[5pt]
+                \dfrac{t+1}{2} & \text{para~} -1 \leq t \leq 1
+            \end{array}
+        \right.
+        $$
+    \begin{enumerate}[a.]
+        \item Encuentre una expresión cerrada para $X(j\omega)$.
+        \item Compruebe que la parte real de su respuesta en a. corresponde a la transformada de Fourier de la parte par de $x(t)$.
+        \item Determine la transformada de Fourier de la parte impar de $x(t)$.
+    \end{enumerate}
+\end{ejercicio}
+
+\begin{ejercicio}
+    Considere la siguiente relación entre dominios temporal-frecuencia:
+    $$ e^{-|t|} \TransformHoriz \dfrac{2}{1+j\omega}$$
+    \begin{enumerate}[a.]
+        \item Use las propiedades adecuadas para encontrar la transformada de $te^{-|t|}$.
+        \item Usando la propiedad de dualidad y su resultado del punto a. encuentre la transformada de:
+    \end{enumerate}
+    $$ \dfrac{4t}{(1+t^2)^2} $$
+\end{ejercicio}
+
+\begin{ejercicio}
+    La señal $x_a(t)$ es generada por la salida de un micrófono utilizado para detectar sonidos de motosierras y disparos en el bosque. Dicha señal posee una composición espectral definida entre los rangos de frecuencias: $1-5kHz$ y $10-20kHz$. Cada nodo de medición debe digitalizar la señal $x_a(t)$ con la ayuda de un ADC para luego ser transmitida a un nodo central en un formato binario. Además, la resolución del ADC es de 32 bits. ¿Cuál es el mínimo valor de frecuencia de muestreo $F_s$ con la que debe ser programado el ADC para que la señal discreta $x(n/F_s)$ pueda ser utilizada posteriormente para reconstruir la información original de la señal $x_a(t)$?
+\end{ejercicio}

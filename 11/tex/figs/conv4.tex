@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\begin{document}
+    \begin{tikzpicture}[>=latex']
+        \draw[lightgray, ultra thin] (-3,-1) grid (3,3);
+        \draw [color=blue,ultra thick] (0,0) to [out=60,in=180] (1,1);
+        \draw [color=blue,ultra thick] (1,1) to [out=-60,in=180] (2,0);
+        \draw [thick][<->] (-3,0) -- (3,0);
+      	\draw [thick][<->] (0,-1) -- (0,3);
+        \node at (0.5,2.75) {$f(t)$};
+        \node at (2.25,-0.35) {$2$};
+        \node at (-0.35,1.25) {$0.5$};
+        \node at (2.75,-0.35) {$t$};
+    \end{tikzpicture}
+\end{document}
