@@ -1,0 +1,79 @@
+\begin{ejercicio}
+	La función de transferencia de un sistema estable es:
+	$$ H(s) = \frac{2s}{s^2-4} $$
+	¿Cuál es la respuesta al impulso del sistema?
+\end{ejercicio}
+
+\begin{ejercicio}
+	Se conocen los siguientes datos de una señal $x(t)$ con transformada de Laplace $X(s)$:
+	\begin{enumerate}[a.]
+		\item $x(t)$ es real y par.
+		\item $X(s)$ tiene 4 polos y ningún cero en el plano finito $s$.
+		\item $X(s)$ tiene un polo $s=\sqrt{2}e^{j\frac{\pi}{4}}$
+		\item $X(0) = 1$
+	\end{enumerate}
+	Encuentre una expresión para $X(s)$ y su respectiva ROC.
+\end{ejercicio}
+
+\begin{ejercicio}
+	\label{ej:impulso_triang}
+	Sea $x(t)$ el impulso triangular definido como:
+	\begin{equation*}
+		x(t) = \left \{
+		\begin{matrix}
+			t+1 && -1 \leq t \leq 0\\
+			-t+1 && 0 \leq t \leq 1\\
+			0 && \text{en el resto} 			
+		\end{matrix}
+		\right .
+	\end{equation*}
+	Encuentre la transformada de Laplace de la función $y(t)$ mostrada en la siguiente figura, a partir de la transformada de Laplace de $x(t)$, siguiendo los siguientes pasos:
+
+	% Aquí va la figura
+
+	\begin{enumerate}[a.]
+		\item Exprese la función $y(t)$ como una suma de dos términos $\alpha x(kt+\tau)$, donde $\alpha,~k,~\tau \in \mathbb{R}$.
+		\item Demuestre que la transformada de Laplace de $x(t)$ es:
+			$$ \mathscr{L}\{x(t)\} = X(s) = \dfrac{e^s+e^{-s}-2}{s^2} = \dfrac{2 \cosh(s)-2}{s^2} $$
+	\end{enumerate}
+		Utilice las propiedades de la transformada de Laplace para encontrar $Y(s) = \mathscr\{y(t)\}$
+
+	\begin{figure}
+		\centering
+		\subfloat{\includestandalone[height=.25\textwidth]{figs/triang}}
+		\subfloat{\includestandalone[height=.25\textwidth]{figs/bridge}}
+		\caption{Funciones $x(t)$ y $y(t)$ para el ejercicio \ref{ej:impulso_triang}.}
+	\end{figure}
+
+\end{ejercicio}
+
+
+\begin{ejercicio}
+	Un sistema LTI causal en reposo, se rige por la siguiente ecuación diferencial:
+		$$ \frac{d^2}{dt^2}y(t) - 2\alpha \frac{d}{dt}y(t) + (\alpha^2+1)y(t) = \frac{d}{dt}x(t) $$
+	Con $\alpha \in \mathbb{R}$.
+	\begin{enumerate}[a.]
+		\item Ecuentre la función de transferencia del sistema $H(s)$.
+		\item Grafique el diagrama de polos y ceros del sistema. Indique en el diagrama la región de convergencia correspondiente. 
+		\item Indique el rango de valores de $\alpha$ para los cuales el sistema es estable.
+		\item Encuentre la respuesta al impulso $h(t)$ del sistema.
+		\item Si al sistema se le introduce una señal $x(t) = \delta(t) + [(\alpha^2+1)t - 2 \alpha]u(t)$, encuentre la respuesta $y(t)$ del sistema a dicha entrada.
+	\end{enumerate}
+\end{ejercicio}
+
+\begin{ejercicio}
+	La siguiente ecuación diferencial:
+		$$ y(t) = \frac{d^2}{dt^2}y(t) - 2 \frac{d}{dt}x(t) $$
+
+	Caracteriza a un sistema LTI en tiempo continuo con respuesta al impulso $h(t)$ y función de transferencia $H(s)$, con entrada $x(t)$ y salida $y(t)$.
+
+	\begin{enumerate}[a.]
+		\item Encuentre la función de transferencia $H(s)$ del sistema, indique su región de convergencia si se sabe que el sistema es causal.
+		\item Grafique el diagrama de polos y ceros de $H(s)$ en el plano $s$.
+		\item ¿El sistema caracterizado por $H(s)$ es estable? Justifique.
+		\item A la salida del sistema se coloca, en cascada, otro sistema caracterizado por la función de transferencia:
+			$$ G(s) = \frac{s-1}{2s},\quad ROC:|\sigma|>0 $$
+		¿Cuál es la función de transferencia del sistema total $Q(s)$ compuesta por los subsistemas en cascada $H(s)$ y $G(s)$? Grafique el diagrama de polos y ceros del sistema $Q(s)$ con su correspondiente región de convergencia.
+		\item Encuentre la respuesta al impulso $q(t)$ del sistem $Q(s)$.
+	\end{enumerate}
+\end{ejercicio}

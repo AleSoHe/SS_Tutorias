@@ -1,0 +1,65 @@
+\begin{ejercicio}
+	Considere el siguiente sistema LTI, para el cual se conoce la siguiente información:
+	\begin{figure}[!h]
+		\centering
+		\includestandalone[width=.4\textwidth]{figs/IO}
+	\end{figure}
+	$$ X(s) = \frac{s+2}{s-2}, \quad \text{con $x(t)=0$ para $t>0$} $$
+	$$ y(t) = -\frac{2}{3}e^{2t}u(-t)+\frac{1}{3}e^{-t}u(t) $$
+	\begin{enumerate}
+		\item Determine $H(s)$ y su región de convergencia.
+		\item Determine $h(t)$
+	\end{enumerate}
+\end{ejercicio}
+
+\begin{ejercicio}
+	La señal $y(t)=e^{-2t}u(t)$ es la salida de un sistema lineal, invariante en el tiempo y causal, que tiene una función de transferencia de la forma:
+	$$ H(s) = \frac{s-1}{s+1} $$
+	\begin{enumerate}
+		\item Encuentre al menos dos posibles entradas $x(t)$ que pueden producir la salida $y(t)$ descrita. Dibuje el diagrama de polos y ceros de $X(s)$ y explique sus decisiones.
+		\item Manteniendo las condiciones anteriores, ¿cuál sería la entrada del sistema? Si se sabe que:
+		$$ \int_{-\infty}^{\infty} |x(t)| dt < \infty $$
+		\item Encuentre la respuesta al impulso si ahora el sistema es estable y tiene como entrada a $y(t)$ y de salida alguna de las $x(t)$ anteriores.
+		\item ¿Cuál es ahora la salida $x(t)$ si se cumple la condición anterior?
+	\end{enumerate}
+\end{ejercicio}
+
+\begin{ejercicio}
+	La función $f(t)$ dada por:
+	$$ f(t) = \left\{
+	\begin{array}{ll}
+		1 & -\alpha \leq t \leq \alpha\\
+		0 & |t|\geq \alpha
+	\end{array}
+	\right .
+	$$
+	\begin{enumerate}
+		\item Demuestre que la expresión algebraica de la transformada de Laplace de $f(t)$ está dada por:
+			$$ F(s) = \frac{e^{\alpha s}-e^{-\alpha s}}{s} $$
+		Indique la región de convergencia de $F(s)$.
+		\item Exprese la función $g(t)$, mostrada en la figura \ref{fig:g}, en términos de combinaciones lineales de $f(t)$ y/o traslaciones y escalamientos en el tiempo.
+		\begin{figure}[!h]
+			\centering
+			\includestandalone[width=.3\textwidth]{figs/g}
+			\caption{Función a utilizar en el ejercicio 3.}
+			\label{fig:g}
+		\end{figure}
+		\item Utilice las propiedades de la transformada de Laplace y los resultados del punto anterior para encontrar $G(s)$.
+	\end{enumerate}
+\end{ejercicio}
+
+\begin{ejercicio}
+	Consisdere un sistema caracterizado por la siguiente ecuación diferencial:
+
+	$$ \frac{d^3 y(t)}{dt^3} + 6 \frac{d^2 y(t)}{dt^2} + 11 \frac{dy(t)}{dt} + 6 y(t) = x(t) $$
+	\begin{enumerate}
+		\item Determine la respuesta de estado cero de este sistema para la entrada $x(t) = e^{-4t}u(t)$.
+		\item Determine la respuesta de entrada cero de este sistema para $t>0^{-}$ considereando que:
+			$$ y(0^{-}) = 1 \qquad \frac{dy(t)}{dt}\bigg\rvert_{t=0^-} = -1 \qquad \frac{d^{2}y(t)}{dt^2}\bigg\rvert_{t=0^-} = 1$$ 
+		\item Determine la salida del sistema considerando la señal de entrada y las condiciones iniciales planteadas anteriormente.
+	\end{enumerate}
+\end{ejercicio}
+
+\begin{ejercicio}
+	Determine la transformada unilateral de Laplace de $x(t) = \delta(t) + \delta(t+1) + e^{-2(t+3)}u(t+1)$. Si $X(s)$ es la transformada obtenida para $x(t)$, encuentre a partir de $X(s)$ la transformada de la función $g(t) = x(t-1)$.
+\end{ejercicio}

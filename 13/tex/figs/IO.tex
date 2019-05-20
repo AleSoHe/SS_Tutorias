@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,calc}
+
+\begin{document}
+
+\tikzset{
+    block/.style = {draw, fill=white, rectangle, minimum height=3em, minimum width=3em},
+    tmp/.style  = {coordinate},
+    %sum/.style= {draw, fill=white, circle, node distance=1cm},
+    sum/.style      = {draw, circle, node distance = 2cm}, % Adder
+    input/.style = {coordinate},
+    output/.style= {coordinate},
+    pinstyle/.style = {pin edge={to-,thin,black}
+    }
+}
+
+\begin{tikzpicture}[auto, node distance=2.2cm,>=latex']
+    \node [input, name=rinput] (rinput) {};
+    \node [block, right of=rinput, node distance=3cm] (system){~$H(s)$~};
+    \node [output, right of=system, node distance=3cm] (output) {};
+    \draw [->] (rinput) -- node {\small $X(s)$} (system);
+    \draw [->] (system) -- node{\small $Y(s)$} (output);
+\end{tikzpicture}
+
+\end{document}
