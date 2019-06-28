@@ -3,8 +3,8 @@ filename=main
 .PHONY:
 
 pdf:
-	pdflatex $(filename).tex
-	pdflatex $(filename).tex
+	pdflatex --shell-escape $(filename).tex
+	pdflatex --shell-escape $(filename).tex
 	okular main.pdf
 
 text: html
