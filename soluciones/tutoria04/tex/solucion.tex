@@ -1,0 +1,64 @@
+
+\subsection*{Ejercicio 3}
+
+	Encuentre la serie de Laurent para:
+	$$ f(z) = \dfrac{1}{z(z-4j)} $$
+	%
+	Centrada en el punto $z_0=2j$\par
+	%
+	%
+	% SOLUCION
+	\underline{Solución:}
+	%
+	Se aplica fracciones parciales:
+	%
+	$$ f(z) = \dfrac{A}{z} + \dfrac{B}{z-4j} $$
+	%
+	Se puede obterner que $A=\dfrac{1}{-4j}$ y $B=\dfrac{1}{4j}$ \par
+	%
+	Por lo que:
+	$$ f(z) = -\dfrac{1}{4j} \left (\dfrac{1}{z} + \dfrac{1}{z-4j} \right) $$
+	%
+	Recordar que la serie de Taylor es:
+	%
+	$$ f(z) = \sum_{n=0}^{\infty} \dfrac{f^{(n)} (z_0)}{n!} (z-z_0)^n$$
+	%
+	Por lo tanto, la primer tarea es calcular las derivadas de $f(z)$ y evaluarlas en $z_0=2j$. \par
+	\begin{align*}
+		% Primera derivada:
+		f^{(1)}(2j) &= -\dfrac{1}{4j} \left (-\dfrac{1}{(2j)^2} + \dfrac{1}{(-2j)^2} \right) = \dfrac{1}{4}\\
+		% Segunda derivada:
+		f^{(2)}(2j) &= -\dfrac{1}{4j} \left (\dfrac{1\cdot 2}{(2j)^3} - \dfrac{1\cdot 2}{(-2j)^3} \right) = 0\\
+		% Tercera derivada:
+		f^{(3)}(2j) &= -\dfrac{1}{4j} \left (-\dfrac{1\cdot 2 \cdot 3}{(2j)^4} + \dfrac{1\cdot 2 \cdot 3}{(-2j)^4} \right) = -\dfrac{1}{8}
+	\end{align*}
+	%
+	Entonces se pueden notar varias transiciones:
+	%
+	\begin{itemize}
+		\item En cada derivada consecutiva, los términos dentro del paréntesis cambian de signo.
+		\item El numerador de los términos entre paréntesis es igual al factorial del número de derivada. Es decir, si la derivada es $n$, entonces en los numeradores se encuentra $n!$.
+		\item El denominador de los términos entre paréntesis tiene potencia $n+1$, donde $n$ es el orden de la derivada.
+	\end{itemize}
+	%
+	Por lo tanto, la $n-$ésima derivada de $f(z)$ evaluada en $z_0=2j$ es:
+	%
+	$$ f^{(n)}(2j) = -\dfrac{1}{4j}\left[ \dfrac{n!}{(2j)^{n+1}}(-1)^n - \dfrac{n!}{(-2j)^{n+1}} (-1)^n \right]$$
+	%
+	Que se puede simplificar a:
+	$$ f^{(n)}(2j) = -\dfrac{(-1)^{n+1} n!}{2 (2j)^{n+2}} [1-(-1)^{n+1}] $$
+	%
+	Pero hay que recordar que los coeficientes $a_n$ de la serie de Taylor son:
+	%
+	$$ a_n = \dfrac{f^{(n)}(2j)}{n!} = -\dfrac{(-1)^{n+1}}{2 (2j)^{n+2}} [1-(-1)^{n+1}] $$
+	%
+	Aún hay un término que se puede simplificar! ¿Cuál y por qué?\par
+	%
+	Finalmente, la serie se puede denotar como:
+	%
+	$$ f(z) = \sum_{n=0}^{\infty} a_n (z-2j)^n, \qquad \text{para $|z-2j|<2$}$$
+	%
+	\underline{Recordatorio:}
+	%
+	también se puede calcular la serie a partir de división polinomial y es más sencillo. Inténtelo.
+	
