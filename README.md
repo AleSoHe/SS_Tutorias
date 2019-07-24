@@ -8,4 +8,7 @@
   - title.tex: título de la guía
   - ejercicios.tex: ejercicios de la guía
 - Algunas carpetas contienen otra subcarpeta llamada figs/ la cual contiene los archivos .tex de las figuras de las guías
-- Además, cada carpeta (correspondiente a cada guía) contiene un Makefile, para compilar los archivos de forma automática, con el uso del comando: make pdf
+- Además, cada carpeta (correspondiente a cada guía) contiene un Makefile, para compilar los archivos de forma automática, con el uso del comando: make pdf en la terminal de Linux.
+
+## Otros
+- Los archivos fueron compilados con pdflatex/texlive, y en algunos es necesario tener instalado pgfplots
