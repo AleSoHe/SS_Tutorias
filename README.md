@@ -1,4 +1,4 @@
-# Tutorias_senales_y_sistemas
+# Tutoría Señales y Sistemas
 
 ## Contenitdo
 - Guías de la 1 a la 8 y de la 10 a la 14
